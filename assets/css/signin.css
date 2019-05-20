@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+:root {
+  --red: #dc3545;
+  --white: #fff;
+  --darkGreen: #025928;
+  --lightGreen: #3c8c30;
+  --lighterGreen: #57c746;
+  --orange: #d96704;
+  --lightGrey: #818385;
+  --lighterGrey: rgba(196, 200, 204, 0.884);
+  --extraLightGrey: rgba(241, 241, 241, 0.788);
+  --darkGrey: #303030;
+  --dashboard: #fcfcfc;
+  --boxShadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  --transition: all 0.2s ease-out;
+  --modal-transition: opacity 0.2s ease-out, transform 500ms ease-out;
+  --button-bg-hover: rgba(177, 169, 169, 0.5);
+}
+
+body {
+  background-color: var(--white);
+  display: flex;
+  align-content: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.button {
+  padding: 0.8rem 3rem;
+  height: 2.5rem;
+  background-color: rgba(177, 169, 169, 0.1);
+  color: black;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: var(--transition)
+}
+
+.button:hover {
+  background-color: var(--button-bg-hover);
+}
+
+.button:active {
+  background-color: var(--button-bg-hover);
+  transform: translate(1px);
+}
+
+.form {
+  position: absolute;
+  top: 25%;
+  z-index: 1;
+  background-color: var(--white);
+  max-width: 24rem;
+  margin: 0 auto 6.25rem;
+  padding: 2.8rem;
+  text-align: center;
+  box-shadow: var(--boxShadow);
+  
+}
+
+.form-link a {
+  color: var(--orange)
+}
+
+.form-link a:hover {
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+}
+
+label {
+  float: left;
+  color: var(--darkGrey);
+  padding-bottom: 0.3rem;
+}
+
+.input {
+  background: var(--extraLightGrey);
+  outline: 0;
+  width: 100%;
+  border: 0;
+  margin: 0 0 0.9rem;
+  padding: 0.9rem;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.input:focus {
+  border: 1px solid var(--darkGrey);
+}
+
+.input::placeholder {
+  color: var(--lighterGrey);
+}
+
+
+.main-nav__brand--container {
+  display: flex;
+  padding: 2rem;
+}
+
+.main-nav__brand {
+  margin: auto;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -4rem;
+}
+
+.form-title {
+  color: var(--darkGrey);
+}
+
+.signup-button,
+.signin-button {
+  width: 100%;
+  background-color: purple;
+  padding: 0.9rem;
+  border: 0;
+  color: var(--white);
+}
+
+.signin-button:hover,
+.signin-button:active {
+  background-color: var(--lighterGreen);
+}
+
+@media (max-width: 25rem) {
+  body {
+    overflow: hidden;
+  }
+
+  .signin-form,
+  .forgot-password_form {
+    margin-top: 12rem;
+    height: 100%;
+    padding-top: auto;
+  }
+}
+
+.forgot-password {
+  color: var(--lightGrey);
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+}
+
+@media (min-width: 40rem) {
+  .form {
+    max-width: 40rem;
+  }
+
+  .forgot-password {
+    font-size: 0.8rem;
+  }
+}
