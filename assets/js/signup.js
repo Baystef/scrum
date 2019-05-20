@@ -43,6 +43,7 @@ const signup = (e) => {
     }
     window.localStorage.setItem('token', response.data.token);
     alert(response.message);
+    window.location.href = 'create-question.html';
   })
   .catch(error => console.log(error))
 }
